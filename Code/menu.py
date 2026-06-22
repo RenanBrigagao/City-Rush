@@ -5,7 +5,7 @@ from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from Code.const import WIN_WIDTH, COLOR_WHITE, MENU_OPTION, COLOR_PINK
+from Code.const import WIN_WIDTH, C_WHITE, MENU_OPTION, C_PINK
 
 
 class Menu:
@@ -26,17 +26,17 @@ class Menu:
             self.screen.blit(menu_bg, (WIN_WIDTH // 2 - 170, 140))
             pygame.draw.rect(
                 self.screen,
-                COLOR_PINK,
+                C_PINK,
                 (WIN_WIDTH // 2 - 170, 140, 340, 180),
                 2
             )
-            self.menu_text(50, "Neon Strike", COLOR_WHITE, ((WIN_WIDTH / 2), 50))
+            self.menu_text(50, "Neon Strike", C_WHITE, ((WIN_WIDTH / 2), 50))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_PINK, ((WIN_WIDTH / 2), 170 + 30 * i))
+                    self.menu_text(20, MENU_OPTION[i], C_PINK, ((WIN_WIDTH / 2), 170 + 30 * i))
                 else:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 170 + 30 * i))
+                    self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 170 + 30 * i))
 
             pygame.display.flip()
 
